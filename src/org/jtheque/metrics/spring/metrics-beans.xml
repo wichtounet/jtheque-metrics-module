@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jtheque="http://www.jtheque.com/schema/jtheque"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans 
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.jtheque.com/schema/jtheque
+            http://www.jtheque.com/schema/jtheque/jtheque.xsd"
+       default-lazy-init="true">
+
+    <bean id="metricsModule" class="org.jtheque.metrics.MetricsModule" lazy-init="false"/>
+
+    <!-- Actions -->
+
+    <bean id="openAction" class="org.jtheque.metrics.view.impl.actions.features.OpenAction"/>
+    <bean id="saveAction" class="org.jtheque.metrics.view.impl.actions.features.SaveAction"/>
+
+    <!-- Controllers -->
+
+    <bean id="metricsController" class="org.jtheque.metrics.controllers.impl.MetricsController"/>
+    <bean id="resultsController" class="org.jtheque.metrics.controllers.impl.ResultsController"/>
+
+    <!-- Services -->
+
+    <bean id="configurationService" class="org.jtheque.metrics.services.impl.ConfigurationService"/>
+    <bean id="metricsService" class="org.jtheque.metrics.services.impl.MetricsService"/>
+
+    <!-- Views -->
+
+    <bean id="metricsView" class="org.jtheque.metrics.view.impl.panels.MetricsView">
+        <constructor-arg ref="metricsModel"/>
+        <constructor-arg>
+            <bean class="org.jtheque.metrics.view.impl.actions.metrics.AddProjectAction"/>
+        </constructor-arg>
+        <constructor-arg>
+            <bean class="org.jtheque.metrics.view.impl.actions.metrics.RemoveProjectAction"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="resultsView" class="org.jtheque.metrics.view.impl.panels.ResultsView">
+        <constructor-arg>
+            <bean class="org.jtheque.metrics.view.impl.actions.results.GenerateMetricsAction"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="metricsModel" class="org.jtheque.metrics.view.impl.model.MetricsModel"/>
+
+</beans>

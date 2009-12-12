@@ -1,0 +1,77 @@
+Télécharger JTheque Metrics Module 1.1.1
+
+   JTheque Metrics Module est distribué sous forme d'un fichier Jar. 
+
+   JTheque Metrics Module 1.1.1 est distribué sous licence {{{http://www.gnu.org/copyleft/gpl.html} GNU General Public License, version 3}}.
+
+*-------------------------+---------+----------------+-----------------+
+|                         |  Link   | Checksum (MD5) | Checksum (SHA1) |
+*-------------------------+---------+----------------+-----------------+
+| JTheque Metrics Module 1.1.1 (jar)                | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.1/jtheque-metrics-module-1.1.1.jar} jtheque-metrics-module-1.1.1.jar}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.1/jtheque-metrics-module-1.1.1.jar.md5} jtheque-metrics-module-1.1.1.jar.md5}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.1/jtheque-metrics-module-1.1.1.jar.sha1} jtheque-metrics-module-1.1.1.jar.sha1}} | 
+*-------------------------+---------+----------------+-----------------+
+| JTheque Metrics Module 1.1.1 (Source tar.bz2)     | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.1/jtheque-metrics-module-1.1.1-src.tar.bz2} jtheque-metrics-module-1.1.1-src.tar.bz2}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.1/jtheque-metrics-module-1.1.1-src.tar.bz2.md5} jtheque-metrics-module-1.1.1-src.tar.bz2.md5}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.1/jtheque-metrics-module-1.1.1-src.tar.bz2.sha1} jtheque-metrics-module-1.1.1-src.tar.bz2.sha1}} | 
+*-------------------------+---------+----------------+-----------------+
+| JTheque Metrics Module 1.1.1 (Source tar.gz)      | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.1/jtheque-metrics-module-1.1.1-src.tar.gz} jtheque-metrics-module-1.1.1-src.tar.gz}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.1/jtheque-metrics-module-1.1.1-src.tar.gz.md5} jtheque-metrics-module-1.1.1-src.tar.gz.md5}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.1/jtheque-metrics-module-1.1.1-src.tar.gz.sha1} jtheque-metrics-module-1.1.1-src.tar.gz.sha1}} | 
+*-------------------------+---------+----------------+-----------------+
+| JTheque Metrics Module 1.1.1 (Source zip)         | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.1/jtheque-metrics-module-1.1.1-src.zip} jtheque-metrics-module-1.1.1-src.zip}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.1/jtheque-metrics-module-1.1.1-src.zip.md5} jtheque-metrics-module-1.1.1-src.zip.md5}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.1/jtheque-metrics-module-1.1.1.jar.sha1} jtheque-metrics-module-1.1.1-src.zip.sha1}} | 
+*-------------------------+---------+----------------+-----------------+
+| JTheque Metrics Module 1.1.1 (Javadoc jar)        | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.1/jtheque-metrics-module-1.1.1-javadoc.jar} jtheque-metrics-module-1.1.1.jar}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.1/jtheque-metrics-module-1.1.1-javadoc.jar.md5} jtheque-metrics-module-1.1.1-javadoc.jar.md5}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.1/jtheque-metrics-module-1.1.1-javadoc.jar.sha1} jtheque-metrics-module-1.1.1-javadoc.jar.sha1}} | 
+*-------------------------+---------+----------------+-----------------+
+| Release Notes           | {{{versions.html} 1.1.1}} | | |
+*-------------------------+---------+----------------+-----------------+
+
+* {JTheque Metrics Module 1.1}
+
+*-------------------------+---------+----------------+-----------------+
+|                         |  Link   | Checksum (MD5) | Checksum (SHA1) |
+*-------------------------+---------+----------------+-----------------+
+| JTheque Metrics Module 1.1 (jar)                | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1/jtheque-metrics-module-1.1.jar} jtheque-metrics-module-1.1.jar}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1/jtheque-metrics-module-1.1.jar.md5} jtheque-metrics-module-1.1.jar.md5}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1/jtheque-metrics-module-1.1.jar.sha1} jtheque-metrics-module-1.1.jar.sha1}} | 
+*-------------------------+---------+----------------+-----------------+
+| JTheque Metrics Module 1.1 (Source tar.bz2)     | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1/jtheque-metrics-module-1.1-src.tar.bz2} jtheque-metrics-module-1.1-src.tar.bz2}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1/jtheque-metrics-module-1.1-src.tar.bz2.md5} jtheque-metrics-module-1.1-src.tar.bz2.md5}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1/jtheque-metrics-module-1.1-src.tar.bz2.sha1} jtheque-metrics-module-1.1-src.tar.bz2.sha1}} | 
+*-------------------------+---------+----------------+-----------------+
+| JTheque Metrics Module 1.1 (Source tar.gz)      | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1/jtheque-metrics-module-1.1-src.tar.gz} jtheque-metrics-module-1.1-src.tar.gz}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1/jtheque-metrics-module-1.1-src.tar.gz.md5} jtheque-metrics-module-1.1-src.tar.gz.md5}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1/jtheque-metrics-module-1.1-src.tar.gz.sha1} jtheque-metrics-module-1.1-src.tar.gz.sha1}} | 
+*-------------------------+---------+----------------+-----------------+
+| JTheque Metrics Module 1.1 (Source zip)         | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1/jtheque-metrics-module-1.1-src.zip} jtheque-metrics-module-1.1-src.zip}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1/jtheque-metrics-module-1.1-src.zip.md5} jtheque-metrics-module-1.1-src.zip.md5}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1/jtheque-metrics-module-1.1.jar.sha1} jtheque-metrics-module-1.1-src.zip.sha1}} | 
+*-------------------------+---------+----------------+-----------------+
+| JTheque Metrics Module 1.1 (Javadoc jar)        | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1/jtheque-metrics-module-1.1-javadoc.jar} jtheque-metrics-module-1.1.jar}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1/jtheque-metrics-module-1.1-javadoc.jar.md5} jtheque-metrics-module-1.1-javadoc.jar.md5}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1/jtheque-metrics-module-1.1-javadoc.jar.sha1} jtheque-metrics-module-1.1-javadoc.jar.sha1}} | 
+*-------------------------+---------+----------------+-----------------+
+| Release Notes           | {{{versions.html} 1.1}} | | |
+*-------------------------+---------+----------------+-----------------+
+
+* {JTheque Metrics Module 1.0.1}
+
+*-------------------------+---------+
+|                         |  Link   |
+*-------------------------+---------+
+| JTheque Metrics Module 1.0.1 (jar)                | {{{http://jtheque.developpez.com/archives/JTheque Metrics Module/1.1/JTheque-Metrics-Module.jar} JTheque-Metrics-Module.jar}} | 
+*-------------------------+---------+
+| JTheque Metrics Module 1.0.1 (Source zip)         | {{{http://jtheque.developpez.com/archives/JTheque Metrics Module/1.1/JTheque-Metrics-Module_src.zip} JTheque-Metrics-Module_src.zip}} | 
+*-------------------------+---------+
+| JTheque Metrics Module 1.0.1 (Javadoc zip)        | {{{http://jtheque.developpez.com/archives/JTheque Metrics Module/1.1/JTheque-Metrics-Module_doc.zip} JTheque-Metrics-Module_doc.zip}} | 
+*-------------------------+---------+
+| Release Notes           | {{{versions.html} 1.0.1}} | 
+*-------------------------+---------+
+
+* {JTheque Metrics Module 1.0}
+
+*-------------------------+---------+
+|                         |  Link   |
+*-------------------------+---------+
+| JTheque Metrics Module 1.0 (jar)                | {{{http://jtheque.developpez.com/archives/JTheque Metrics Module/1.0/JTheque-Metrics-Module.jar} JTheque-Metrics-Module.jar}} | 
+*-------------------------+---------+
+| JTheque Metrics Module 1.0 (Source zip)         | {{{http://jtheque.developpez.com/archives/JTheque Metrics Module/1.0/JTheque-Metrics-Module_src.zip} JTheque-Metrics-Module_src.zip}} | 
+*-------------------------+---------+
+| JTheque Metrics Module 1.0 (Javadoc zip)        | {{{http://jtheque.developpez.com/archives/JTheque Metrics Module/1.0/JTheque-Metrics-Module_doc.zip} JTheque-Metrics-Module_doc.zip}} | 
+*-------------------------+---------+
+| Release Notes           | {{{versions.html} 1.0}} | 
+*-------------------------+---------+
+
+* Pré-requis sytèmes
+
+*----------------------+---------------------------------------------------------------------------------------------+
+| <<JRE>>              | 6.0 ou supérieur |
+*----------------------+---------------------------------------------------------------------------------------------+
+| <<Librairies>> | JTheque Core, Java Parser, JavaCC | 
+*----------------------+---------------------------------------------------------------------------------------------+
+| <<Operating System>> | Aucun pré-requis. La librairie est multi-plateforme. |
+*----------------------+---------------------------------------------------------------------------------------------+

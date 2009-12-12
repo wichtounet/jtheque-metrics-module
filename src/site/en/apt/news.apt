@@ -1,0 +1,12 @@
+News
+
+* 03.12.2009 JTheque Metrics Module 1.1.1
+
+    I just release the version 1.1.1 of JTheque Metrics Module. This version use now JTheque Core 
+    2.0.2. More, the code has been reviewed and documented. 
+
+* 03.09.2009  New Site
+
+    I'm pleased to announce the new site of the JTheque Metrics Module. This site is now genered using
+    Maven 2. It's easier for me to manage and it's an well-kwown site architecture for the
+    java developer. 

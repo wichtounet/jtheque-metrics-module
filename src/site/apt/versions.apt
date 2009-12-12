@@ -1,0 +1,22 @@
+Versions
+
+Ce document présente les différentes versions de JTheque Metrics Module. 
+
+* 1.1.1 03.12.2009 Passage à JTheque Core 2.0.2
+
+    * Passage à JTheque Core 2.0.2
+    * Revue du code et documentation
+
+* 1.1 19.09.2009 Passage à JTheque Core 2.0, Maven 2
+
+    * Passage à Maven 2
+    * Passage à JTheque Core 2.0
+    * Amélioration de la qualité du code
+
+* 1.0.1 02.06.2009 Corrections de bugs et améliorations basiques
+
+    * Corrections de bugs et améliorations basiques
+                
+* 1.0 31.05.2009 Première version
+
+    * Version de base permettant de générer des métriques pour les projets Java
