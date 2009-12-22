@@ -18,7 +18,9 @@
             <item name="JTheque Metrics Module" href="http://jtheque.developpez.com/metrics/metrics-module"/>
         </breadcrumbs>
 
-        <menu ref="parent"/>
+        <menu name="Parent">
+            <item name="JTheque Metrics" href="http://jtheque.developpez.com/metrics/"/>
+        </menu>
 
         <menu name="JTheque Metrics Module">
             <item name="Introduction" href="index.html"/>
