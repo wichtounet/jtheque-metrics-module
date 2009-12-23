@@ -40,7 +40,7 @@ import org.jtheque.metrics.services.impl.utils.ConfigManager;
  *
  * @author Baptiste Wicht
  */
-@Module(id = "jtheque-metrics-module", i18n = "classpath:org/jtheque/metrics/ressources/i18n/metrics", version = "1.1.1-SNAPSHOT", core = "2.0.2",
+@Module(id = "jtheque-metrics-module", i18n = "classpath:org/jtheque/metrics/i18n/metrics", version = "1.1.1-SNAPSHOT", core = "2.0.2",
         jarFile = "jtheque-metrics-module-1.1.1-SNAPSHOT.jar", updateURL = "http://jtheque.developpez.com/public/versions/MetricsModule.versions")
 public final class MetricsModule implements IMetricsModule {
     private Feature openFeature;
