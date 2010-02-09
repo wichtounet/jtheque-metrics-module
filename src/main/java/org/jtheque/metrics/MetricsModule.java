@@ -4,9 +4,8 @@ import org.jtheque.core.managers.Managers;
 import org.jtheque.core.managers.beans.IBeansManager;
 import org.jtheque.core.managers.error.IErrorManager;
 import org.jtheque.core.managers.error.InternationalizedError;
-import org.jtheque.core.managers.feature.Feature;
-import org.jtheque.core.managers.feature.Feature.FeatureType;
 import org.jtheque.core.managers.feature.IFeatureManager;
+import org.jtheque.core.managers.feature.Menu;
 import org.jtheque.core.managers.log.ILoggingManager;
 import org.jtheque.core.managers.module.annotations.Module;
 import org.jtheque.core.managers.module.annotations.Plug;
@@ -40,11 +39,10 @@ import org.jtheque.metrics.services.impl.utils.ConfigManager;
  *
  * @author Baptiste Wicht
  */
-@Module(id = "jtheque-metrics-module", i18n = "classpath:org/jtheque/metrics/i18n/metrics", version = "1.1.1-SNAPSHOT", core = "2.0.2",
-        jarFile = "jtheque-metrics-module-1.1.1-SNAPSHOT.jar", updateURL = "http://jtheque.developpez.com/public/versions/MetricsModule.versions")
+@Module(id = "jtheque-metrics-module", i18n = "classpath:org/jtheque/metrics/i18n/metrics", version = "1.1.2", core = "2.0.3.1",
+        jarFile = "jtheque-metrics-module-1.1.2.jar", updateURL = "http://jtheque.developpez.com/public/versions/MetricsModule.versions")
 public final class MetricsModule implements IMetricsModule {
-    private Feature openFeature;
-    private Feature saveFeature;
+    private final Menu metricsMenu = new MetricsMenu();
 
     /**
      * The configuration of the module.
@@ -60,7 +58,7 @@ public final class MetricsModule implements IMetricsModule {
     }
 
     /**
-     * Plug the module. 
+     * Plug the module.
      */
     @Plug
     public void plug() {
@@ -76,10 +74,7 @@ public final class MetricsModule implements IMetricsModule {
             }
         }
 
-        IFeatureManager feature = Managers.getManager(IFeatureManager.class);
-
-        openFeature = feature.addSubFeature(feature.getFeature(IFeatureManager.CoreFeature.FILE), "openAction", FeatureType.ACTION, 10);
-        saveFeature = feature.addSubFeature(feature.getFeature(IFeatureManager.CoreFeature.FILE), "saveAction", FeatureType.ACTION, 12);
+        Managers.getManager(IFeatureManager.class).addMenu(metricsMenu);
 
         Managers.getManager(IViewManager.class).addTabComponent(Managers.getManager(IBeansManager.class).<TabComponent>getBean("metricsView"));
         Managers.getManager(IViewManager.class).addTabComponent(Managers.getManager(IBeansManager.class).<TabComponent>getBean("resultsView"));
@@ -93,8 +88,7 @@ public final class MetricsModule implements IMetricsModule {
         Managers.getManager(IViewManager.class).removeTabComponent(Managers.getManager(IBeansManager.class).<TabComponent>getBean("metricsView"));
         Managers.getManager(IViewManager.class).removeTabComponent(Managers.getManager(IBeansManager.class).<TabComponent>getBean("resultsView"));
 
-        Managers.getManager(IFeatureManager.class).getFeature(IFeatureManager.CoreFeature.FILE).removeSubFeature(saveFeature);
-        Managers.getManager(IFeatureManager.class).getFeature(IFeatureManager.CoreFeature.FILE).removeSubFeature(openFeature);
+        Managers.getManager(IFeatureManager.class).removeMenu(metricsMenu);
     }
 
     @Override

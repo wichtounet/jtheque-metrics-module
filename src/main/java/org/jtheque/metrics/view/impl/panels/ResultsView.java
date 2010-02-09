@@ -19,13 +19,12 @@ package org.jtheque.metrics.view.impl.panels;
 import org.jdesktop.swingx.JXTreeTable;
 import org.jtheque.core.managers.Managers;
 import org.jtheque.core.managers.error.JThequeError;
-import org.jtheque.core.managers.view.able.IView;
 import org.jtheque.core.managers.view.able.IViewManager;
 import org.jtheque.core.managers.view.edt.SimpleTask;
+import org.jtheque.core.managers.view.impl.components.panel.AbstractDelegatedView;
 import org.jtheque.core.utils.ui.PanelBuilder;
 import org.jtheque.metrics.utils.elements.Project;
 import org.jtheque.metrics.view.able.IResultsView;
-import org.jtheque.metrics.view.impl.AbstractDelegatedView;
 import org.jtheque.metrics.view.impl.model.ElementsCellRenderer;
 import org.jtheque.metrics.view.impl.model.ResultsTreeTableModel;
 import org.jtheque.metrics.view.impl.model.TreeTableModelFactory;
@@ -41,7 +40,7 @@ import java.util.Collection;
  *
  * @author Baptiste Wicht
  */
-public final class ResultsView extends AbstractDelegatedView implements IResultsView {
+public final class ResultsView extends AbstractDelegatedView<AbstractTabPanel> implements IResultsView {
     private JXTreeTable treeTable;
     private ResultsTreeTableModel model;
 
@@ -65,6 +64,7 @@ public final class ResultsView extends AbstractDelegatedView implements IResults
     @Override
     protected void buildDelegatedView() {
         view = new ResultsPanel();
+        setDelegate(view);
         view.build();
     }
 
@@ -134,11 +134,6 @@ public final class ResultsView extends AbstractDelegatedView implements IResults
 
     @Override
     public JComponent getComponent() {
-        return view;
-    }
-
-    @Override
-    public IView getImplementationView() {
         return view;
     }
 }

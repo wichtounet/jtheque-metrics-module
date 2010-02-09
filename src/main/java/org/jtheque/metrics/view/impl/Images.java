@@ -27,9 +27,9 @@ import javax.swing.Icon;
  * @author Baptiste Wicht
  */
 public final class Images {
-    private static final Icon PACKAGE = Managers.getManager(IResourceManager.class).getIcon("org/jtheque/metrics/images/package.gif");
-    private static final Icon METHOD = Managers.getManager(IResourceManager.class).getIcon("org/jtheque/metrics/images/method.gif");
-    private static final Icon CLASS = Managers.getManager(IResourceManager.class).getIcon("org/jtheque/metrics/images/class.gif");
+    private static final Icon PACKAGE = Managers.getManager(IResourceManager.class).getIcon("org/jtheque/metrics/images/package.png");
+    private static final Icon METHOD = Managers.getManager(IResourceManager.class).getIcon("org/jtheque/metrics/images/method.png");
+    private static final Icon CLASS = Managers.getManager(IResourceManager.class).getIcon("org/jtheque/metrics/images/class.png");
 
     /**
      * Construct a new Images. Utility class- private constructor.

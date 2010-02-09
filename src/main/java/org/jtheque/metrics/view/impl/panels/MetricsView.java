@@ -4,12 +4,11 @@ import org.jdesktop.swingx.JXTable;
 import org.jtheque.core.managers.Managers;
 import org.jtheque.core.managers.error.JThequeError;
 import org.jtheque.core.managers.language.ILanguageManager;
-import org.jtheque.core.managers.view.able.IView;
+import org.jtheque.core.managers.view.impl.components.panel.AbstractDelegatedView;
 import org.jtheque.core.managers.view.impl.components.panel.FileChooserPanel;
 import org.jtheque.core.utils.ui.PanelBuilder;
 import org.jtheque.core.utils.ui.ValidationUtils;
 import org.jtheque.metrics.view.able.IMetricsView;
-import org.jtheque.metrics.view.impl.AbstractDelegatedView;
 import org.jtheque.metrics.view.impl.model.MetricsModel;
 import org.jtheque.metrics.view.impl.model.ProjectsTableModel;
 import org.jtheque.utils.ui.GridBagUtils;
@@ -43,7 +42,7 @@ import java.util.Collection;
  *
  * @author Baptiste Wicht
  */
-public final class MetricsView extends AbstractDelegatedView implements IMetricsView {
+public final class MetricsView extends AbstractDelegatedView<AbstractTabPanel> implements IMetricsView {
     private JXTable table;
     private JTextField fieldName;
     private FileChooserPanel fileChooser;
@@ -78,11 +77,12 @@ public final class MetricsView extends AbstractDelegatedView implements IMetrics
     @Override
     protected void buildDelegatedView() {
         view = new MetricsPanel();
+        setDelegate(view);
         view.build();
     }
 
     /**
-     * A panel to display the projets. 
+     * A panel to display the projects. 
      * 
      * @author Baptiste Wicht
      */
@@ -94,7 +94,7 @@ public final class MetricsView extends AbstractDelegatedView implements IMetrics
             PanelBuilder builder = new PanelBuilder(this);
     
             builder.addI18nLabel("metrics.view.projects",
-                    builder.gbcSet(0, 0, GridBagUtils.NONE, GridBagUtils.FIRST_LINE_START));
+                    builder.gbcSet(0, 0, GridBagUtils.HORIZONTAL, GridBagUtils.BASELINE_LEADING, 0, 1, 1.0, 0.0));
     
             tableModel = new ProjectsTableModel();
             tableModel.setHeader(new String[]{
@@ -111,20 +111,21 @@ public final class MetricsView extends AbstractDelegatedView implements IMetrics
             table.packAll();
     
             builder.addScrolled(table,
-                    builder.gbcSet(0, 1, GridBagUtils.BOTH, GridBagUtils.FIRST_LINE_START, 2, 1, 1.0, 1.0));
+                    builder.gbcSet(0, 1, GridBagUtils.BOTH, GridBagUtils.BASELINE_LEADING, 0, 1, 1.0, 1.0));
     
-            builder.addI18nLabel("metrics.view.add", builder.gbcSet(0, 2));
+            builder.addI18nLabel("metrics.view.add", builder.gbcSet(0, 2, GridBagUtils.HORIZONTAL, GridBagUtils.BASELINE_LEADING, 0, 1, 1.0, 0.0));
     
-            builder.addI18nLabel("metrics.view.name", builder.gbcSet(0, 3));
+            builder.addI18nLabel("metrics.view.name", builder.gbcSet(0, 3, GridBagUtils.NONE, GridBagUtils.BASELINE_LEADING));
     
-            fieldName = builder.add(new JTextField(FIELD_COLUMNS), builder.gbcSet(1, 3));
+            fieldName = builder.add(new JTextField(FIELD_COLUMNS), builder.gbcSet(1, 3, GridBagUtils.HORIZONTAL, GridBagUtils.BASELINE_LEADING, 0, 1, 1.0, 0.0));
     
-            builder.addI18nLabel("metrics.view.folder", builder.gbcSet(0, 4));
+            builder.addI18nLabel("metrics.view.folder", builder.gbcSet(0, 4, GridBagUtils.NONE, GridBagUtils.BASELINE_LEADING));
     
-            fileChooser = builder.add(new FileChooserPanel(), builder.gbcSet(1, 4));
+            fileChooser = builder.add(new FileChooserPanel(), builder.gbcSet(1, 4, GridBagUtils.HORIZONTAL, GridBagUtils.BASELINE_LEADING, 0, 1, 1.0, 0.0));
             fileChooser.setDirectoriesOnly();
     
-            builder.addButtonBar(builder.gbcSet(0, 5), addAction, removeAction);
+            builder.addButtonBar(builder.gbcSet(0, 5, GridBagUtils.HORIZONTAL, GridBagUtils.BASELINE_LEADING, 0, 1, 1.0, 0.0),
+                    addAction, removeAction);
         }
         
         @Override
@@ -171,11 +172,6 @@ public final class MetricsView extends AbstractDelegatedView implements IMetrics
 
     @Override
     public JComponent getComponent() {
-        return view;
-    }
-
-    @Override
-    public IView getImplementationView() {
         return view;
     }
 }
