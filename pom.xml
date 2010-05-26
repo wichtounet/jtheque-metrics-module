@@ -7,7 +7,7 @@
     
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jtheque</groupId>
-    <artifactId>jtheque-metrics-module</artifactId>
+    <artifactId>org.jtheque.metrics-module</artifactId>
     <packaging>jar</packaging>
     <name>JTheque Metrics Module</name>
     <version>1.1.2</version>
@@ -36,7 +36,7 @@
             <url>http://wichtounet.homedns.org:8280/artifactory/libs-releases-local</url>
         </repository>
         <snapshotRepository>
-            <id>Server-PC-snapshots</id>
+            <id>Server-PC-releases</id>
             <name>Server-PC-snapshots</name>
             <url>http://wichtounet.homedns.org:8280/artifactory/libs-snapshots-local</url>
         </snapshotRepository>
@@ -141,6 +141,14 @@
                     </executions>
                 </plugin>
             </plugins>
+
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ftp</artifactId>
+                <version>1.0-beta-5</version>
+            </extension>
+        </extensions>
     </build>
 
     <reporting>
@@ -168,7 +176,7 @@
     <dependencies>
         <dependency>
             <groupId>org.jtheque</groupId>
-            <artifactId>jtheque-core</artifactId>
+            <artifactId>org.jtheque.core</artifactId>
             <version>2.0.3.1</version>
         </dependency>
 

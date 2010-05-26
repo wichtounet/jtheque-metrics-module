@@ -22,7 +22,8 @@ import org.jtheque.core.managers.error.JThequeError;
 import org.jtheque.core.managers.view.able.IViewManager;
 import org.jtheque.core.managers.view.edt.SimpleTask;
 import org.jtheque.core.managers.view.impl.components.panel.AbstractDelegatedView;
-import org.jtheque.core.utils.ui.PanelBuilder;
+import org.jtheque.core.utils.ui.builders.JThequePanelBuilder;
+import org.jtheque.core.utils.ui.builders.PanelBuilder;
 import org.jtheque.metrics.utils.elements.Project;
 import org.jtheque.metrics.view.able.IResultsView;
 import org.jtheque.metrics.view.impl.model.ElementsCellRenderer;
@@ -78,7 +79,7 @@ public final class ResultsView extends AbstractDelegatedView<AbstractTabPanel> i
          * Build the view. 
          */
         private void build() {
-            PanelBuilder builder = new PanelBuilder(this);
+            PanelBuilder builder = new JThequePanelBuilder(this);
     
             builder.addButton(generateAction, builder.gbcSet(0, 0));
     

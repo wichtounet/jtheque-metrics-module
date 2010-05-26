@@ -1,8 +1,26 @@
-Télécharger JTheque Metrics Module 1.1.1
+Télécharger JTheque Metrics Module 1.1.2
 
    JTheque Metrics Module est distribué sous forme d'un fichier Jar. 
 
-   JTheque Metrics Module 1.1.1 est distribué sous licence {{{http://www.gnu.org/copyleft/gpl.html} GNU General Public License, version 3}}.
+   JTheque Metrics Module 1.1.2 est distribué sous licence {{{http://www.gnu.org/copyleft/gpl.html} GNU General Public License, version 3}}.
+
+*-------------------------+---------+----------------+-----------------+
+|                         |  Link   | Checksum (MD5) | Checksum (SHA1) |
+*-------------------------+---------+----------------+-----------------+
+| JTheque Metrics Module 1.1.2 (jar)                | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.2/jtheque-metrics-module-1.1.2.jar} jtheque-metrics-module-1.1.2.jar}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.2/jtheque-metrics-module-1.1.2.jar.md5} jtheque-metrics-module-1.1.2.jar.md5}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.2/jtheque-metrics-module-1.1.2.jar.sha1} jtheque-metrics-module-1.1.2.jar.sha1}} |
+*-------------------------+---------+----------------+-----------------+
+| JTheque Metrics Module 1.1.2 (Source tar.bz2)     | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.2/jtheque-metrics-module-1.1.2-src.tar.bz2} jtheque-metrics-module-1.1.2-src.tar.bz2}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.2/jtheque-metrics-module-1.1.2-src.tar.bz2.md5} jtheque-metrics-module-1.1.2-src.tar.bz2.md5}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.2/jtheque-metrics-module-1.1.2-src.tar.bz2.sha1} jtheque-metrics-module-1.1.2-src.tar.bz2.sha1}} |
+*-------------------------+---------+----------------+-----------------+
+| JTheque Metrics Module 1.1.2 (Source tar.gz)      | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.2/jtheque-metrics-module-1.1.2-src.tar.gz} jtheque-metrics-module-1.1.2-src.tar.gz}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.2/jtheque-metrics-module-1.1.2-src.tar.gz.md5} jtheque-metrics-module-1.1.2-src.tar.gz.md5}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.2/jtheque-metrics-module-1.1.2-src.tar.gz.sha1} jtheque-metrics-module-1.1.2-src.tar.gz.sha1}} |
+*-------------------------+---------+----------------+-----------------+
+| JTheque Metrics Module 1.1.2 (Source zip)         | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.2/jtheque-metrics-module-1.1.2-src.zip} jtheque-metrics-module-1.1.2-src.zip}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.2/jtheque-metrics-module-1.1.2-src.zip.md5} jtheque-metrics-module-1.1.2-src.zip.md5}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.2/jtheque-metrics-module-1.1.2.jar.sha1} jtheque-metrics-module-1.1.2-src.zip.sha1}} |
+*-------------------------+---------+----------------+-----------------+
+| JTheque Metrics Module 1.1.2 (Javadoc jar)        | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.2/jtheque-metrics-module-1.1.2-javadoc.jar} jtheque-metrics-module-1.1.2.jar}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.2/jtheque-metrics-module-1.1.2-javadoc.jar.md5} jtheque-metrics-module-1.1.2-javadoc.jar.md5}} | {{{http://jtheque.developpez.com/repository/org/jtheque/jtheque-metrics-module/1.1.2/jtheque-metrics-module-1.1.2-javadoc.jar.sha1} jtheque-metrics-module-1.1.2-javadoc.jar.sha1}} |
+*-------------------------+---------+----------------+-----------------+
+| Release Notes           | {{{versions.html} 1.1.2}} | | |
+*-------------------------+---------+----------------+-----------------+
+
+* {JTheque Metrics Module 1.1.1}
 
 *-------------------------+---------+----------------+-----------------+
 |                         |  Link   | Checksum (MD5) | Checksum (SHA1) |

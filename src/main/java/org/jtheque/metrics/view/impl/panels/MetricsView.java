@@ -6,7 +6,8 @@ import org.jtheque.core.managers.error.JThequeError;
 import org.jtheque.core.managers.language.ILanguageManager;
 import org.jtheque.core.managers.view.impl.components.panel.AbstractDelegatedView;
 import org.jtheque.core.managers.view.impl.components.panel.FileChooserPanel;
-import org.jtheque.core.utils.ui.PanelBuilder;
+import org.jtheque.core.utils.ui.builders.I18nPanelBuilder;
+import org.jtheque.core.utils.ui.builders.JThequePanelBuilder;
 import org.jtheque.core.utils.ui.ValidationUtils;
 import org.jtheque.metrics.view.able.IMetricsView;
 import org.jtheque.metrics.view.impl.model.MetricsModel;
@@ -91,7 +92,7 @@ public final class MetricsView extends AbstractDelegatedView<AbstractTabPanel> i
          * Build the view. 
          */
         private void build() {
-            PanelBuilder builder = new PanelBuilder(this);
+            I18nPanelBuilder builder = new JThequePanelBuilder(this);
     
             builder.addI18nLabel("metrics.view.projects",
                     builder.gbcSet(0, 0, GridBagUtils.HORIZONTAL, GridBagUtils.BASELINE_LEADING, 0, 1, 1.0, 0.0));
