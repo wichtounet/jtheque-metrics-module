@@ -17,9 +17,9 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" inherit-compiler-output="false">
-    <output url="file:///home/wichtounet/Builds/modules/jtheque-metrics-module/classes/production" />
-    <output-test url="file:///home/wichtounet/Builds/modules/jtheque-metrics-module/test-classes" />
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/../../../../Builds/modules/jtheque-metrics-module/classes/production" />
+    <output-test url="file://$MODULE_DIR$/../../../../Builds/modules/jtheque-metrics-module/test-classes" />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
@@ -27,6 +27,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="Maven: org.jtheque:org.jtheque.core:2.0.3.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: net.java.dev.javacc:javacc:4.2" level="project" />
+    <orderEntry type="library" exported="" name="Maven: com.google.code.javaparser:javaparser:1.0.1" level="project" />
   </component>
   <component name="org.twodividedbyzero.idea.findbugs">
     <option name="_basePreferences">
