@@ -16,14 +16,6 @@ package org.jtheque.metrics.services.impl.utils.count;
  * along with JTheque.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import japa.parser.JavaParser;
-import japa.parser.ParseException;
-import japa.parser.ast.CompilationUnit;
-import japa.parser.ast.body.ClassOrInterfaceDeclaration;
-import japa.parser.ast.body.ConstructorDeclaration;
-import japa.parser.ast.body.MethodDeclaration;
-import japa.parser.ast.body.Parameter;
-import japa.parser.ast.visitor.VoidVisitorAdapter;
 import org.jtheque.core.managers.Managers;
 import org.jtheque.core.managers.log.ILoggingManager;
 import org.jtheque.metrics.utils.JavaFileFilter;
@@ -41,6 +33,15 @@ import java.io.FileNotFoundException;
 import java.nio.channels.FileChannel;
 import java.util.Scanner;
 import java.util.regex.Pattern;
+
+import japa.parser.JavaParser;
+import japa.parser.ParseException;
+import japa.parser.ast.CompilationUnit;
+import japa.parser.ast.body.ClassOrInterfaceDeclaration;
+import japa.parser.ast.body.ConstructorDeclaration;
+import japa.parser.ast.body.MethodDeclaration;
+import japa.parser.ast.body.Parameter;
+import japa.parser.ast.visitor.VoidVisitorAdapter;
 
 /**
  * A counter for the Java project.
@@ -127,10 +128,10 @@ public final class JavaCounter implements Counter {
     }
 
     /**
-     * Compute the packages paths. 
-     * 
-     * @param folder The current folder. 
-     * @param parentAbsolutePath The absolute path of the parent. 
+     * Compute the packages paths.
+     *
+     * @param folder             The current folder.
+     * @param parentAbsolutePath The absolute path of the parent.
      */
     private void computePackagesPaths(File folder, String parentAbsolutePath) {
         currentPackage = new Package(folder.getName());
@@ -158,11 +159,11 @@ public final class JavaCounter implements Counter {
     }
 
     /**
-     * Calc the level of the path. 
-     * 
-     * @param parentAbsolutePath The path to search the level for. 
-     * 
-     * @return The level of the path. 
+     * Calc the level of the path.
+     *
+     * @param parentAbsolutePath The path to search the level for.
+     *
+     * @return The level of the path.
      */
     private int calcLevel(String parentAbsolutePath) {
         int levels = 0;
@@ -240,12 +241,12 @@ public final class JavaCounter implements Counter {
     }
 
     /**
-     * Update the informations of the class. 
-     * 
-     * @param c The Class to fill. 
-     * @param lines The lines. 
-     * @param commentLines The lines of comment. 
-     * @param physicalLines The number of physical lines. 
+     * Update the informations of the class.
+     *
+     * @param c             The Class to fill.
+     * @param lines         The lines.
+     * @param commentLines  The lines of comment.
+     * @param physicalLines The number of physical lines.
      */
     private static void updateClassInfos(Class c, int lines, int commentLines, int physicalLines) {
         c.setCodeLines(lines);
@@ -254,15 +255,15 @@ public final class JavaCounter implements Counter {
     }
 
     /**
-     * Update the informations of the line pointer. 
-     * 
-     * @param current The current line. 
-     * @param pointer The current pointer or <code>null</code> if there is no pointer now. 
-     * @param tempCodeLines The code lines
-     * @param tempCommentLines The comment lines. 
-     * @param tempPhysicalLines The physical lines. 
-     * 
-     * @return The current pointer or null if the pointer is arrived at the end of his field. 
+     * Update the informations of the line pointer.
+     *
+     * @param current           The current line.
+     * @param pointer           The current pointer or <code>null</code> if there is no pointer now.
+     * @param tempCodeLines     The code lines
+     * @param tempCommentLines  The comment lines.
+     * @param tempPhysicalLines The physical lines.
+     *
+     * @return The current pointer or null if the pointer is arrived at the end of his field.
      */
     private static Pointer updatePointerInfos(int current, Pointer pointer, int tempCodeLines, int tempCommentLines, int tempPhysicalLines) {
         if (pointer != null && pointer.getStopLine() == current) {
@@ -280,6 +281,7 @@ public final class JavaCounter implements Counter {
      * Indicate if a line is a comment or not.
      *
      * @param line The line to test.
+     *
      * @return true if the line is a comment else false.
      */
     private static boolean isComment(String line) {
@@ -359,6 +361,7 @@ public final class JavaCounter implements Counter {
          * Construct the constructor name.
          *
          * @param d The constructor declaration.
+         *
          * @return The name of the constructor.
          */
         private String constructName(ConstructorDeclaration d) {
@@ -369,6 +372,7 @@ public final class JavaCounter implements Counter {
          * Construct the method name.
          *
          * @param d The method declaration.
+         *
          * @return The name of the method.
          */
         private String constructName(MethodDeclaration d) {
@@ -380,6 +384,7 @@ public final class JavaCounter implements Counter {
          *
          * @param name       The name of the class or constructor.
          * @param parameters The parameters.
+         *
          * @return The name.
          */
         private String constructName(String name, Iterable<Parameter> parameters) {

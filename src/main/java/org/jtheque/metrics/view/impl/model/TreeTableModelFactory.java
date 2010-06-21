@@ -49,6 +49,7 @@ public final class TreeTableModelFactory {
      * Build the model for the list of projects.
      *
      * @param projects The projects to build the metrics for.
+     *
      * @return The build model tree table model.
      */
     public static ResultsTreeTableModel buildModel(Iterable<Project> projects) {

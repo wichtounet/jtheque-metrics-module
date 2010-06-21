@@ -23,6 +23,7 @@ import org.jtheque.metrics.services.impl.utils.MetricsConfiguration;
 import org.jtheque.metrics.utils.projects.ProjectDefinition;
 
 import javax.annotation.Resource;
+
 import java.util.Collection;
 
 /**

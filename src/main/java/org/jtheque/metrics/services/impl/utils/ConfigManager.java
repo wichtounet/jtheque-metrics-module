@@ -81,10 +81,10 @@ public final class ConfigManager extends AbstractState {
     }
 
     /**
-     * Add a project from the node state. 
-     * 
-     * @param config The config to fill. 
-     * @param n The node state. 
+     * Add a project from the node state.
+     *
+     * @param config The config to fill.
+     * @param n      The node state.
      */
     private static void addProjectFromNode(MetricsConfiguration config, NodeState n) {
         String projectName = null;

@@ -23,6 +23,7 @@ import org.jtheque.metrics.utils.projects.ModularProject;
 import org.jtheque.metrics.view.able.IResultsView;
 
 import javax.annotation.Resource;
+
 import java.util.Collection;
 
 /**

@@ -50,7 +50,7 @@ public final class MetricsModule implements IMetricsModule {
     private ConfigManager config;
 
     /**
-     * Pre plug the module. 
+     * Pre plug the module.
      */
     @PrePlug
     public void prePlug() {
@@ -81,7 +81,7 @@ public final class MetricsModule implements IMetricsModule {
     }
 
     /**
-     * Unplug the module. 
+     * Unplug the module.
      */
     @UnPlug
     public void unplug() {

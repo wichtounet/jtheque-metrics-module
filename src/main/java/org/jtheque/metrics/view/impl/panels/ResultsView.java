@@ -16,7 +16,6 @@ package org.jtheque.metrics.view.impl.panels;
  * along with JTheque.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import org.jdesktop.swingx.JXTreeTable;
 import org.jtheque.core.managers.Managers;
 import org.jtheque.core.managers.error.JThequeError;
 import org.jtheque.core.managers.view.able.IViewManager;
@@ -31,9 +30,12 @@ import org.jtheque.metrics.view.impl.model.ResultsTreeTableModel;
 import org.jtheque.metrics.view.impl.model.TreeTableModelFactory;
 import org.jtheque.utils.ui.GridBagUtils;
 
+import org.jdesktop.swingx.JXTreeTable;
+
 import javax.swing.Action;
 import javax.swing.JComponent;
 import javax.swing.JTable;
+
 import java.util.Collection;
 
 /**
@@ -48,17 +50,17 @@ public final class ResultsView extends AbstractDelegatedView<AbstractTabPanel> i
     private final Action generateAction;
 
     private ResultsPanel view;
-    
+
     /**
-     * Construct a new ResultsView. 
-     * 
-     * @param generateAction The action to generate the metrics. 
+     * Construct a new ResultsView.
+     *
+     * @param generateAction The action to generate the metrics.
      */
     public ResultsView(Action generateAction) {
         super();
-        
+
         this.generateAction = generateAction;
-        
+
         buildInEDT();
     }
 
@@ -70,19 +72,19 @@ public final class ResultsView extends AbstractDelegatedView<AbstractTabPanel> i
     }
 
     /**
-     * A panel to display the results. 
-     * 
+     * A panel to display the results.
+     *
      * @author Baptiste Wicht
      */
     private final class ResultsPanel extends AbstractTabPanel {
         /**
-         * Build the view. 
+         * Build the view.
          */
         private void build() {
             PanelBuilder builder = new JThequePanelBuilder(this);
-    
+
             builder.addButton(generateAction, builder.gbcSet(0, 0));
-    
+
             treeTable = new JXTreeTable();
             treeTable.setTreeCellRenderer(new ElementsCellRenderer());
             treeTable.setAutoCreateColumnsFromModel(true);
@@ -92,11 +94,11 @@ public final class ResultsView extends AbstractDelegatedView<AbstractTabPanel> i
             treeTable.setColumnControlVisible(true);
             treeTable.setRootVisible(false);
             treeTable.packAll();
-    
+
             builder.addScrolled(treeTable,
                     builder.gbcSet(0, 1, GridBagUtils.BOTH, GridBagUtils.FIRST_LINE_START, 1.0, 1.0));
         }
-        
+
         @Override
         protected void validate(Collection<JThequeError> errors) {
             //Nothing to validate in this view. 
@@ -121,13 +123,13 @@ public final class ResultsView extends AbstractDelegatedView<AbstractTabPanel> i
     @Override
     public void buildModel(Collection<Project> projects) {
         model = TreeTableModelFactory.buildModel(projects);
-        
-        Managers.getManager(IViewManager.class).execute(new SimpleTask(){
+
+        Managers.getManager(IViewManager.class).execute(new SimpleTask() {
             @Override
             public void run() {
                 treeTable.setTreeTableModel(model);
                 treeTable.packAll();
-        
+
                 Managers.getManager(IViewManager.class).refresh(treeTable);
             }
         });

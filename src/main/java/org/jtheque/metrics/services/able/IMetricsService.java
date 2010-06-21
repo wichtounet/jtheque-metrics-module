@@ -31,6 +31,7 @@ public interface IMetricsService {
      * Generate the metrics for a modular project.
      *
      * @param project The modular projects to generate the metrics for.
+     *
      * @return A List containing all the metrics projects of the results.
      */
     Collection<Project> generateMetrics(ModularProject project);

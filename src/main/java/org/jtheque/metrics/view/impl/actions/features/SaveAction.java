@@ -9,6 +9,7 @@ import org.jtheque.metrics.services.able.IConfigurationService;
 
 import javax.annotation.Resource;
 import javax.swing.JOptionPane;
+
 import java.awt.event.ActionEvent;
 
 /*
@@ -53,7 +54,7 @@ public final class SaveAction extends JThequeAction {
         boolean end = false;
 
         while (!end && name != null) {
-            if (configurationService.configurationExists(name)){
+            if (configurationService.configurationExists(name)) {
                 boolean validated = Managers.getManager(IViewManager.class).askUserForConfirmation(
                         Managers.getManager(ILanguageManager.class).getMessage("config.dialogs.config.exists"),
                         Managers.getManager(ILanguageManager.class).getMessage("config.dialogs.config.exists.title"));

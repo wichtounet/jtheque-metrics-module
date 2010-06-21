@@ -47,6 +47,7 @@ final class Pointers {
      * Return the pointer for the start line.
      *
      * @param startLine The start line.
+     *
      * @return the pointer for this line or null if there is no pointer for this line.
      */
     public Pointer getPointer(int startLine) {

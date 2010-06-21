@@ -7,6 +7,7 @@ import org.jtheque.core.managers.view.able.IViewManager;
 import org.jtheque.core.managers.view.able.components.IModel;
 
 import javax.swing.JPanel;
+
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -77,7 +78,7 @@ public abstract class AbstractTabPanel extends JPanel implements IView {
 
     @Override
     public IModel getModel() {
-        return null; 
+        return null;
     }
 
     /**

@@ -1,6 +1,5 @@
 package org.jtheque.metrics.view.impl.actions.metrics;
 
-import org.jdesktop.swingx.JXTable;
 import org.jtheque.core.managers.Managers;
 import org.jtheque.core.managers.language.ILanguageManager;
 import org.jtheque.core.managers.view.impl.actions.JThequeAction;
@@ -8,8 +7,11 @@ import org.jtheque.metrics.controllers.able.IMetricsController;
 import org.jtheque.metrics.utils.projects.ProjectDefinition;
 import org.jtheque.metrics.view.impl.model.ProjectsTableModel;
 
+import org.jdesktop.swingx.JXTable;
+
 import javax.annotation.Resource;
 import javax.swing.JOptionPane;
+
 import java.awt.event.ActionEvent;
 
 /*

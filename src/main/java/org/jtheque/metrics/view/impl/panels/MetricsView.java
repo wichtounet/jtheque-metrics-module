@@ -1,24 +1,26 @@
 package org.jtheque.metrics.view.impl.panels;
 
-import org.jdesktop.swingx.JXTable;
 import org.jtheque.core.managers.Managers;
 import org.jtheque.core.managers.error.JThequeError;
 import org.jtheque.core.managers.language.ILanguageManager;
 import org.jtheque.core.managers.view.impl.components.panel.AbstractDelegatedView;
 import org.jtheque.core.managers.view.impl.components.panel.FileChooserPanel;
+import org.jtheque.core.utils.ui.ValidationUtils;
 import org.jtheque.core.utils.ui.builders.I18nPanelBuilder;
 import org.jtheque.core.utils.ui.builders.JThequePanelBuilder;
-import org.jtheque.core.utils.ui.ValidationUtils;
 import org.jtheque.metrics.view.able.IMetricsView;
 import org.jtheque.metrics.view.impl.model.MetricsModel;
 import org.jtheque.metrics.view.impl.model.ProjectsTableModel;
 import org.jtheque.utils.ui.GridBagUtils;
+
+import org.jdesktop.swingx.JXTable;
 
 import javax.swing.Action;
 import javax.swing.JComponent;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.KeyStroke;
+
 import java.awt.event.KeyEvent;
 import java.util.Collection;
 
@@ -53,17 +55,17 @@ public final class MetricsView extends AbstractDelegatedView<AbstractTabPanel> i
     private final MetricsModel model;
     private final Action addAction;
     private final Action removeAction;
-    
+
     private static final int FIELD_COLUMNS = 20;
 
     private MetricsPanel view;
-    
+
     /**
-     * Construct a new MetricsView. 
-     * 
-     * @param model The model of the view. 
-     * @param addAction The action to add configuration. 
-     * @param removeAction The action to remove a configuration. 
+     * Construct a new MetricsView.
+     *
+     * @param model        The model of the view.
+     * @param addAction    The action to add configuration.
+     * @param removeAction The action to remove a configuration.
      */
     public MetricsView(MetricsModel model, Action addAction, Action removeAction) {
         super();
@@ -71,7 +73,7 @@ public final class MetricsView extends AbstractDelegatedView<AbstractTabPanel> i
         this.model = model;
         this.addAction = addAction;
         this.removeAction = removeAction;
-        
+
         buildInEDT();
     }
 
@@ -83,25 +85,25 @@ public final class MetricsView extends AbstractDelegatedView<AbstractTabPanel> i
     }
 
     /**
-     * A panel to display the projects. 
-     * 
+     * A panel to display the projects.
+     *
      * @author Baptiste Wicht
      */
     private final class MetricsPanel extends AbstractTabPanel {
         /**
-         * Build the view. 
+         * Build the view.
          */
         private void build() {
             I18nPanelBuilder builder = new JThequePanelBuilder(this);
-    
+
             builder.addI18nLabel("metrics.view.projects",
                     builder.gbcSet(0, 0, GridBagUtils.HORIZONTAL, GridBagUtils.BASELINE_LEADING, 0, 1, 1.0, 0.0));
-    
+
             tableModel = new ProjectsTableModel();
             tableModel.setHeader(new String[]{
                     Managers.getManager(ILanguageManager.class).getMessage("metrics.view.table.name"),
                     Managers.getManager(ILanguageManager.class).getMessage("metrics.view.table.folder")});
-    
+
             table = new JXTable(tableModel);
             table.setSortable(true);
             table.getTableHeader().setReorderingAllowed(false);
@@ -110,37 +112,37 @@ public final class MetricsView extends AbstractDelegatedView<AbstractTabPanel> i
             table.getActionMap().put("delete", removeAction);
             table.getInputMap().put(KeyStroke.getKeyStroke(KeyEvent.VK_DELETE, 0), "delete");
             table.packAll();
-    
+
             builder.addScrolled(table,
                     builder.gbcSet(0, 1, GridBagUtils.BOTH, GridBagUtils.BASELINE_LEADING, 0, 1, 1.0, 1.0));
-    
+
             builder.addI18nLabel("metrics.view.add", builder.gbcSet(0, 2, GridBagUtils.HORIZONTAL, GridBagUtils.BASELINE_LEADING, 0, 1, 1.0, 0.0));
-    
+
             builder.addI18nLabel("metrics.view.name", builder.gbcSet(0, 3, GridBagUtils.NONE, GridBagUtils.BASELINE_LEADING));
-    
+
             fieldName = builder.add(new JTextField(FIELD_COLUMNS), builder.gbcSet(1, 3, GridBagUtils.HORIZONTAL, GridBagUtils.BASELINE_LEADING, 0, 1, 1.0, 0.0));
-    
+
             builder.addI18nLabel("metrics.view.folder", builder.gbcSet(0, 4, GridBagUtils.NONE, GridBagUtils.BASELINE_LEADING));
-    
+
             fileChooser = builder.add(new FileChooserPanel(), builder.gbcSet(1, 4, GridBagUtils.HORIZONTAL, GridBagUtils.BASELINE_LEADING, 0, 1, 1.0, 0.0));
             fileChooser.setDirectoriesOnly();
-    
+
             builder.addButtonBar(builder.gbcSet(0, 5, GridBagUtils.HORIZONTAL, GridBagUtils.BASELINE_LEADING, 0, 1, 1.0, 0.0),
                     addAction, removeAction);
         }
-        
+
         @Override
         protected void validate(Collection<JThequeError> errors) {
             ValidationUtils.rejectIfEmpty(fieldName.getText(), "metrics.view.name", errors);
             ValidationUtils.rejectIfEmpty(fileChooser.getFilePath(), "metrics.view.folder", errors);
         }
     }
-        
+
     @Override
     public MetricsModel getModel() {
         return model;
     }
-    
+
     @Override
     public JXTable getTable() {
         return table;

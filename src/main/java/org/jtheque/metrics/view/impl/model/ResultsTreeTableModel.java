@@ -1,8 +1,9 @@
 package org.jtheque.metrics.view.impl.model;
 
+import org.jtheque.core.managers.view.able.components.IModel;
+
 import org.jdesktop.swingx.treetable.DefaultTreeTableModel;
 import org.jdesktop.swingx.treetable.TreeTableNode;
-import org.jtheque.core.managers.view.able.components.IModel;
 
 /*
  * This file is part of JTheque.

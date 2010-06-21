@@ -3,6 +3,7 @@ package org.jtheque.metrics.view.impl.model;
 import org.jtheque.metrics.utils.projects.ProjectDefinition;
 
 import javax.swing.table.AbstractTableModel;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -122,8 +123,7 @@ public final class ProjectsTableModel extends AbstractTableModel {
     }
 
     /**
-     * Add a project to the model.
-     * 0
+     * Add a project to the model. 0
      *
      * @param project The project to add to the model.
      */
@@ -150,6 +150,7 @@ public final class ProjectsTableModel extends AbstractTableModel {
      * Return the project with the specified index.
      *
      * @param index The index of the project.
+     *
      * @return The project with the specific index else null.
      */
     public ProjectDefinition getProject(int index) {

@@ -38,13 +38,14 @@ public interface IConfigurationService {
      * Indicate if a metrics configuration already exists or not.
      *
      * @param name The name of the configuration.
+     *
      * @return true if the configuration already exists else false.
      */
     boolean configurationExists(String name);
 
     /**
-     * Save a configuration. If the configuration already exists, the configuration will be edited else a new
-     * metrics configuration will be created.
+     * Save a configuration. If the configuration already exists, the configuration will be edited else a new metrics
+     * configuration will be created.
      *
      * @param name     The name of the metrics configuration.
      * @param projects The projects of the configuration.

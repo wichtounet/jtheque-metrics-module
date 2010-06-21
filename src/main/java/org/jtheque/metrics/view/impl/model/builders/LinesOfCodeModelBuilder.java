@@ -1,6 +1,5 @@
 package org.jtheque.metrics.view.impl.model.builders;
 
-import org.jdesktop.swingx.treetable.AbstractMutableTreeTableNode;
 import org.jtheque.core.managers.Managers;
 import org.jtheque.core.managers.language.ILanguageManager;
 import org.jtheque.metrics.utils.elements.Class;
@@ -16,6 +15,8 @@ import org.jtheque.metrics.view.impl.nodes.lines.code.MethodLinesOfCodeNode;
 import org.jtheque.metrics.view.impl.nodes.lines.code.MethodsLinesOfCodeNode;
 import org.jtheque.metrics.view.impl.nodes.lines.code.PackageLinesOfCodeNode;
 import org.jtheque.metrics.view.impl.nodes.lines.code.ProjectLinesOfCodeNode;
+
+import org.jdesktop.swingx.treetable.AbstractMutableTreeTableNode;
 
 import java.util.ArrayList;
 import java.util.Collection;

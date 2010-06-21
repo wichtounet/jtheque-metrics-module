@@ -36,7 +36,7 @@ public final class MetricsService implements IMetricsService {
     public Collection<Project> generateMetrics(ModularProject project) {
         Collection<Project> projects = new ArrayList<Project>(project.getSubProjects().size());
 
-        for (ProjectDefinition def : project.getSubProjects()) {            
+        for (ProjectDefinition def : project.getSubProjects()) {
             Project p = new Project(def.getName());
 
             Counter counter = new JavaCounter(p);

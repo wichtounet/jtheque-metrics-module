@@ -11,6 +11,7 @@ import org.jtheque.metrics.utils.projects.ProjectDefinition;
 import org.jtheque.metrics.view.able.IMetricsView;
 
 import javax.annotation.Resource;
+
 import java.awt.event.ActionEvent;
 
 /*
@@ -73,8 +74,8 @@ public final class GenerateMetricsAction extends JThequeAction {
 
         /**
          * Create a new GenerateMetricsRunnable.
-         * 
-         * @param project    The project
+         *
+         * @param project The project
          */
         GenerateMetricsRunnable(ModularProject project) {
             super();

@@ -5,6 +5,7 @@ import org.jtheque.metrics.utils.projects.ProjectDefinition;
 import org.jtheque.metrics.view.able.IMetricsView;
 
 import javax.annotation.Resource;
+
 import java.io.File;
 import java.util.Collection;
 

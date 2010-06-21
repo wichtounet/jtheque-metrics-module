@@ -16,7 +16,6 @@ package org.jtheque.metrics.view.impl.model.builders;
  * along with JTheque.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import org.jdesktop.swingx.treetable.AbstractMutableTreeTableNode;
 import org.jtheque.core.managers.Managers;
 import org.jtheque.core.managers.language.ILanguageManager;
 import org.jtheque.metrics.utils.elements.Class;
@@ -32,6 +31,8 @@ import org.jtheque.metrics.view.impl.nodes.lines.comment.MethodLinesOfCommentNod
 import org.jtheque.metrics.view.impl.nodes.lines.comment.MethodsLinesOfCommentNode;
 import org.jtheque.metrics.view.impl.nodes.lines.comment.PackageLinesOfCommentNode;
 import org.jtheque.metrics.view.impl.nodes.lines.comment.ProjectLinesOfCommentNode;
+
+import org.jdesktop.swingx.treetable.AbstractMutableTreeTableNode;
 
 import java.util.ArrayList;
 import java.util.Collection;

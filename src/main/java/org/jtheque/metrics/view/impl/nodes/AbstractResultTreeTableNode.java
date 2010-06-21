@@ -1,8 +1,9 @@
 package org.jtheque.metrics.view.impl.nodes;
 
-import org.jdesktop.swingx.treetable.AbstractMutableTreeTableNode;
 import org.jtheque.metrics.view.impl.model.Element;
 import org.jtheque.metrics.view.impl.model.ResultsTreeTableModel.Columns;
+
+import org.jdesktop.swingx.treetable.AbstractMutableTreeTableNode;
 
 /*
  * This file is part of JTheque.

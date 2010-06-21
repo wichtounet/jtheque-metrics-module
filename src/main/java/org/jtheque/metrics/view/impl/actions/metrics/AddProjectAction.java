@@ -21,6 +21,7 @@ import org.jtheque.metrics.controllers.able.IMetricsController;
 import org.jtheque.metrics.view.able.IMetricsView;
 
 import javax.annotation.Resource;
+
 import java.awt.event.ActionEvent;
 
 /**

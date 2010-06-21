@@ -16,12 +16,13 @@ package org.jtheque.metrics.view.able;
  * along with JTheque.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import org.jdesktop.swingx.JXTable;
 import org.jtheque.core.managers.view.able.IView;
 import org.jtheque.core.managers.view.able.components.TabComponent;
 import org.jtheque.core.managers.view.impl.components.panel.FileChooserPanel;
 import org.jtheque.metrics.view.impl.model.MetricsModel;
 import org.jtheque.metrics.view.impl.model.ProjectsTableModel;
+
+import org.jdesktop.swingx.JXTable;
 
 import javax.swing.JTextField;
 
